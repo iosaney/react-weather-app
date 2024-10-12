@@ -34,13 +34,18 @@ export default function WeatherSearch() {
       {" "}
       <form onSubmit={handleSubmit}>
         <input
-        className="searchBar"
+          className="searchBar"
           type="search"
           name="search"
           placeholder="Search for a City"
           onChange={updateCity}
         />
-        <input className="searchButton" type="submit" name="submitButton" value="Search" />
+        <input
+          className="searchButton"
+          type="submit"
+          name="submitButton"
+          value="Search"
+        />
       </form>
       {loaded ? (
         <InfinitySpin
@@ -49,13 +54,11 @@ export default function WeatherSearch() {
           color="#6643b5"
           ariaLabel="infinity-spin-loading"
         />
-      ) : temperature ? (
+      ) : temperature && (
         <h1>
           {" "}
           It is currently {temperature}ºC in {search}{" "}
         </h1>
-      ) : (
-        <small>Type a city and click Search.</small>
       )}
     </div>
   );
