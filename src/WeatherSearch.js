@@ -55,7 +55,7 @@ export default function WeatherSearch() {
           It is currently {temperature}ºC in {search}{" "}
         </h1>
       ) : (
-        <p>Type a city and click Search.</p>
+        <small>Type a city and click Search.</small>
       )}
     </div>
   );
